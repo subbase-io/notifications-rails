@@ -10,7 +10,7 @@ module NotificationSettings
     included do
       before_validation :build_settings
 
-      serialize :settings, Hashie::Mash
+      serialize :settings, type: Hashie::Mash
 
       include NotificationSettings::Settings::InstanceMethods
     end
